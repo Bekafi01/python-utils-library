@@ -1,0 +1,27 @@
+[project]
+name = "python-utils-library"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Bereket Fikre", email = "bereketfi01@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.13.4",
+    "pyyaml>=6.0.3",
+]
+
+[project.scripts]
+python-utils-library = "python_utils_library:main"
+
+[build-system]
+requires = ["uv_build>=0.11.17,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.1.0",
+    "pytest>=9.1.0",
+    "ruff>=0.15.17",
+]
